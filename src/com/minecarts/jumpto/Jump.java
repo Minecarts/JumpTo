@@ -25,7 +25,12 @@ public class Jump {
             public void run() {
                 synchronized(jumps) {
                     if(!playerHasMoved()) {
-                        Jump.this.player.teleport(Jump.this.to);
+                        Location to = Jump.this.to.clone();
+                        Location from = Jump.this.player.getLocation();
+                        to.setPitch(from.getPitch());
+                        to.setYaw(from.getYaw());
+                        
+                        Jump.this.player.teleport(to);
                         jumps.remove(Jump.this.player);
                     }
                 }
