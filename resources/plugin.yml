@@ -1,0 +1,13 @@
+name: JumpTo
+description: Simple sign-based jump points
+author: megabytes
+website: http://www.minecarts.com/
+
+main: com.minecarts.jumpto.Plugin
+version: ${pom.version}
+
+
+permissions:
+    jumpto.jump:
+        description: Allow use of jump signs
+        default: true
