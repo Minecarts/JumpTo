@@ -11,3 +11,6 @@ permissions:
     jumpto.jump:
         description: Allow use of jump signs
         default: true
+    jumpto.crossworld:
+        description: Allow use of cross-world jump signs
+        default: true

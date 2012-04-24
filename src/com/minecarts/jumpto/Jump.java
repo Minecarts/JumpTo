@@ -38,6 +38,10 @@ public class Jump {
         }, delay);
     }
     
+    public static boolean isScheduled(Player player) {
+        return jumps.containsKey(player);
+    }
+    
     public static Jump schedule(Plugin plugin, Player player, Location to, int delay) {
         Jump old = jumps.get(player);
         if(old != null) old.cancel();
